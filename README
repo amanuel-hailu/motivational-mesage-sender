@@ -1,0 +1,54 @@
+# Reminder Scheduler with Quotes & Images
+
+This project sends scheduled reminders containing a quote and an image to specified recipients via text message. Quotes are fetched from a designated quote API, and images are retrieved from an image API by passing a keyword.
+
+## Features
+
+- Schedule reminders at specific times or intervals.
+- Fetch inspirational quotes from a quote-generating API.
+- Retrieve related images from an image API using keywords.
+- Send reminders with a quote and an image via SMS.
+
+## Prerequisites
+
+- Python 3.8 or higher
+- Virtual environment (recommended)
+- API keys for the quote and image services
+- Twilio or another service for sending SMS
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/reminder-scheduler.git
+   cd reminder-scheduler
+   ```
+
+2. Install the required packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Create a `.env` file in the root directory and add the following environment variables:
+
+   ```bash
+   QUOTE_API_KEY=your_quote_api_key
+   IMAGE_API_KEY=your_image_api_key
+   TWILIO_ACCOUNT_SID=your_twilio_account_sid
+   TWILIO_AUTH_TOKEN=your_twilio_auth_token
+   TWILIO_PHONE_NUMBER=your_twilio_phone_number
+   ```
+
+   > **Note:** You can use any quote and image API you like. The ones used in this project are [ZenQuotes](https://zenquotes.io/) and [Pexels](https://www.pexels.com/api/).
+
+## Usage
+
+1. Run the script:
+
+   ```bash
+   python main.py --run-now
+   ```
+
+   > **Note:** The `--run-now` flag is optional. If you don't use it, the script will run in the background and send reminders at the specified times.
